@@ -17,7 +17,7 @@ const data = [
 
 const list = () => {
   return [...data] 
-}; 
+};
 
 
 const find = (id) => {

@@ -70,12 +70,14 @@ app.get("/posts/:id", (req, res, next) => {
 });
 
 
+// app.get("/", (req, res) => res.send("Hello World!"));
 app.use((err, req, res, next) => {
  console.error(err.stack);
  res.status(404).send("PAGE NOT FOUND");
 });
 
 
+// const PORT = 1337;
 
 const { PORT = 1337 } = process.env;
 app.listen(PORT, () => {
@@ -88,3 +90,4 @@ app.get('/posts/:id', (req, res) => {
   const post = postBank.find(id);
   res.send(html);
 });
+
